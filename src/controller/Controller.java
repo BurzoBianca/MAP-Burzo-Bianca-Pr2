@@ -47,7 +47,7 @@ public class Controller {
     public List<Team> filterTeamBYMitarbeiter(Long id){
         return this.repoTeam.findAll()
                 .stream()
-                .filter(bestellung -> bestellung.getMitarbeiters().contains(this.findMitarbeiter(id)))
+                .filter(mitarbeiter -> mitarbeiter.getMitarbeiters().contains(this.findMitarbeiter(id)))
                 .collect(Collectors.toList());
     }
 
